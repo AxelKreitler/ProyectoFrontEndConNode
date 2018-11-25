@@ -8,6 +8,8 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var contactRouter = require('./routes/contact');
+var loginRouter = require('./routes/login');
+var signupRouter = require('./routes/signup');
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(session({secret:'123clave',cookie:{maxAge: null}}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/contact', contactRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

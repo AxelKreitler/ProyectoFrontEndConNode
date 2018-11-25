@@ -1,2 +1,41 @@
-<h1>{{title}}</h1>
-<h1>HOLA???????????</h1>
+<body class="bg-grey">
+    <div class="row margenesDivs" style="max-width:100%">
+        <div class="col-8 paddingColIzq">
+            <div class="parteizquierda1">
+                {{#each publicaciones}}
+                <div class="post1">
+                    <h2>{{Titulo}}</h2>
+                    <h5>{{SubTitulo}}</h5>
+                    <img src="{{Imagen}}">
+                    <p>{{Descripcion}}</p>
+                </div>
+                <div class="paddingEndPost"></div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-4 paddingColDer">
+            <div class="partederecha1">
+                <div class="post1">
+                    <h2>Contacto</h2>
+                    <img src="/images/FondoNoche.jpg" style="height:100px;">
+                    <p>Email: AAAAA@HOTMAIL.COM</p>
+                </div>
+                <div class="paddingEndPost"></div>
+                <div class="post1">
+                    <h2>Post mas populares</h2>
+                    <p></p>
+                    <p><a href="index.html">Post numero 1</a></p>
+                    <p><a href="index.html">Post numero 2</a></p>
+                    <p><a href="index.html">Post numero 3</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-dark">
+        <div class="footer1 bg-dark">
+            <p></p>
+            <p class="footerLetters"> Horizon games <a class="footerLink" href="index.html">Copyright</a> reserved</p>
+        </div>
+    </div>
+</body>
