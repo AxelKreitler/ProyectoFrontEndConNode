@@ -14,6 +14,9 @@ var signupRouter = require('./routes/signup');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/newpost');
 var searchRouter = require('./routes/search');
+var theFogRouter = require('./routes/the-fog');
+var rampageOfTheDeadRouter = require('./routes/rampage-of-the-dead');
+var newProjectRouter = require('./routes/new-project');
 
 var app = express();
 
@@ -38,6 +41,9 @@ app.use('/signup', signupRouter);
 app.use('/post', postRouter);
 app.use('/newpost', newpostRouter);
 app.use('/search', searchRouter);
+app.use('/the-fog', theFogRouter);
+app.use('/rampage-of-the-dead', rampageOfTheDeadRouter);
+app.use('/new-project', newProjectRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
