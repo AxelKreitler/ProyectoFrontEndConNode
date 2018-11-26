@@ -4,7 +4,7 @@
             <div class="parteizquierda1">
                 {{#each publicaciones}}
                 <div class="post1">
-                    <h2>{{Titulo}}</h2>
+                    <a href="/post/{{id}}" class="not-active"><h2>{{Titulo}}</h2></a>
                     <h5>{{SubTitulo}}</h5>
                     <img src="{{Imagen}}">
                     <p>{{Descripcion}}</p>
@@ -32,10 +32,5 @@
         </div>
     </div>
     
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-dark">
-        <div class="footer1 bg-dark">
-            <p></p>
-            <p class="footerLetters"> Horizon games <a class="footerLink" href="index.html">Copyright</a> reserved</p>
-        </div>
-    </div>
+    
 </body>

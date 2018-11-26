@@ -6,6 +6,17 @@ a {
   color: #00B7FF;
 }
 
+.not-active {
+  text-decoration: none;
+  color: black;
+}
+
+.not-active:hover{
+  background-color: grey;
+  color: rgb(0, 0, 125);
+  text-decoration: none;
+}
+
 /*LOGIN*/
 
 .background1{

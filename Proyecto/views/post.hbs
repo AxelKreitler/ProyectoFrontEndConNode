@@ -1,0 +1,20 @@
+<body class="bg-grey">
+    <div class="row margenesDivs" style="max-width:100%">
+        <div class="col-12">
+            <div class="paddingEndPost"></div>
+            <div class="parteizquierda1">
+                {{#each publicaciones}}
+                <div class="post1">
+                    <h2>{{Titulo}}</h2>
+                    <h5>{{SubTitulo}}</h5>
+                    <img src="{{Imagen}}">
+                    <p>{{Descripcion}}</p>
+                </div>
+                <div class="paddingEndPost"></div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
