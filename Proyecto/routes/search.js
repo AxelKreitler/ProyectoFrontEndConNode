@@ -11,7 +11,7 @@ router.post('/', function(req, res, next) {
     if(error){
       console.log(error);
     }
-    res.render('index', { publicaciones:result });
+    res.render('index', { publicaciones:result ,idU: req.session.idU});
   });
 });
 

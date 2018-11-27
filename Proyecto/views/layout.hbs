@@ -32,9 +32,6 @@
           <li class="nav-item">
             <a class="nav-link" href="contact"> Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about"> About</a>
-          </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right ml-auto">
@@ -42,19 +39,22 @@
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search">
                 <button class="btn btn-success" type="submit">Search</button>
             </form>
+            {{#if idU}}
             <li class="nav-item">
-                <a class="nav-link" href="login">Login</a>
+                <a class="nav-link" href="newpost">New Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="login">Sign In</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="signup">Sign Up</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
-                <div class="dropdown-menu dropdown-menu-right bg-dark">
-                  <a class="dropdown-item dropdownNombre1" href="settings">Settings</a>
-                  <a class="dropdown-item dropdownNombre1" href="#">Log out</a>
-                </div>
-            </li>
+            {{/if}}
+            
         </ul>
         
       </nav>

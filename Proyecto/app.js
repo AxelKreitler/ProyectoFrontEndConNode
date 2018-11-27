@@ -17,6 +17,7 @@ var searchRouter = require('./routes/search');
 var theFogRouter = require('./routes/the-fog');
 var rampageOfTheDeadRouter = require('./routes/rampage-of-the-dead');
 var newProjectRouter = require('./routes/new-project');
+var logoutRouter = require('./routes/logout');
 
 var app = express();
 
@@ -30,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({secret:'123clave',cookie:{maxAge: null}}));
+app.use(session({secret:'123clave',saveUninitialized: true ,cookie:{maxAge: null}}));
 app.use(fileUpload());
 
 app.use('/', indexRouter);
@@ -44,6 +45,7 @@ app.use('/search', searchRouter);
 app.use('/the-fog', theFogRouter);
 app.use('/rampage-of-the-dead', rampageOfTheDeadRouter);
 app.use('/new-project', newProjectRouter);
+app.use('/logout', logoutRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

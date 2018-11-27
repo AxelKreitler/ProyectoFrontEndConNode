@@ -3,7 +3,11 @@ var router = express.Router();
 var db = require('./db');
 
 router.get('/', function(req,res,next){
-    res.render('newpost');
+
+    if(req.session.email == null){
+        res.render('login',{mensaje:'Acceso Denegado, logeate primero.'});
+    }
+    res.render('newpost',{idU: req.session.idU});
 });
 
 
@@ -17,8 +21,18 @@ router.post('/', function(req,res,next){
     console.log(nombreFile);
 
     if(req.session.email == null){
-        res.render('login',{mensaje:'Acceso Denegado, logeate primero.'});
-    }
+        res.render('login',{mensaje:'Acceso Denegado, logeate primero.',idU: req.session.idU});
+    } 
+
+    var data = {
+        Titulo : req.body.titulo,
+        SubTitulo : req.body.subtitulo,
+        Descripcion: req.body.descripcion,
+        Imagen : "/images/"+nombreFile,
+        creador_id : req.session.idU,
+        vistas : 0
+    };
+
 
     if(AFile.mimetype == "image/jpeg" || AFile.mimetype == "image/png" || AFile.mimetype == "image/jpg"){
         AFile.mv('./public/images/'+nombreFile,function(error){
@@ -29,16 +43,18 @@ router.post('/', function(req,res,next){
         });
     }
 
-    var consulta = "insert into publicaciones (Titulo,SubTitulo,Descripcion,Imagen,creador_id) values ('"+titulo+"','"+subtitulo+"','"+descripcion+"','/images/"+nombreFile+"','"+id+"')";
-
-    db.query(consulta,function(error, resultado){
+    // var consulta = "insert into publicaciones (Titulo,SubTitulo,Descripcion,Imagen,creador_id,vistas) values ('"+titulo+"','"+subtitulo+"','"+descripcion+"','/images/"+nombreFile+"','"+req.session.idU+"',0)";
+     db.query('insert into publicaciones set ?',data,function(error,result) {
+    // db.query(consulta,function(error, resultado){
         if (error) {
             console.log(error);
         }
         else{
-            res.redirect('../');
+            console.log()
+            res.redirect('/');
         }
-    });
+    // });
+});
 });
 
 module.exports = router;

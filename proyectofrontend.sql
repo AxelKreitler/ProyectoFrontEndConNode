@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-11-2018 a las 02:03:55
--- Versión del servidor: 10.1.32-MariaDB
--- Versión de PHP: 7.2.5
+-- Tiempo de generación: 27-11-2018 a las 02:09:38
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,19 +34,20 @@ CREATE TABLE `publicaciones` (
   `SubTitulo` varchar(250) DEFAULT NULL,
   `Descripcion` varchar(4000) NOT NULL,
   `Imagen` varchar(250) NOT NULL,
-  `creador_id` int(11) DEFAULT NULL
+  `creador_id` int(11) DEFAULT NULL,
+  `vistas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `publicaciones`
 --
 
-INSERT INTO `publicaciones` (`id`, `Titulo`, `SubTitulo`, `Descripcion`, `Imagen`, `creador_id`) VALUES
-(1, 'Titulo Pendiente', 'Subtitulo /Fecha de publicacion', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia non dolore ducimus blanditiis, fugiat perspiciatis quidem soluta quis inventore dolor sed magnam. Officia iure consequatur deserunt corporis eaque omnis suscipit.', '/images/FondoNoche.jpg', NULL),
-(2, 'Titulo prueba 2', 'Los subtitulos tambien pueden ser fechas', 'Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.\r\n\r\nThestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer\'s Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.\r\n\r\nAlohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.', '/images/FondoNoche.jpg', NULL),
-(3, 'Titulo Newpost prueba', 'probando', 'Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', '/images/bioshock1D4.jpg', 1),
-(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1),
-(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1);
+INSERT INTO `publicaciones` (`id`, `Titulo`, `SubTitulo`, `Descripcion`, `Imagen`, `creador_id`, `vistas`) VALUES
+(1, 'Titulo Pendiente', 'Subtitulo /Fecha de publicacion', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia non dolore ducimus blanditiis, fugiat perspiciatis quidem soluta quis inventore dolor sed magnam. Officia iure consequatur deserunt corporis eaque omnis suscipit.', '/images/FondoNoche.jpg', NULL, 0),
+(2, 'Titulo prueba 2', 'Los subtitulos tambien pueden ser fechas', 'Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.\r\n\r\nThestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer\'s Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.\r\n\r\nAlohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.', '/images/FondoNoche.jpg', NULL, 0),
+(3, 'Titulo Newpost prueba', 'probando', 'Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', '/images/bioshock1D4.jpg', 1, 0),
+(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1, 0),
+(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

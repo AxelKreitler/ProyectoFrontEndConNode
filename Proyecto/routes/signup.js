@@ -4,7 +4,7 @@ var db = require('./db');
 var md5 = require('md5');
 
 router.get('/', function(req,res,next){
-    res.render('signup');
+    res.render('signup',{idU: req.session.idU});
 });
 
 router.post('/', function(req,res,next){
@@ -16,7 +16,7 @@ router.post('/', function(req,res,next){
         var consulta = "insert into usuarios (email,password) values ('"+email+"','"+password1+"')";
     }
     else{
-        res.render('signup',{mensaje:'Datos incorrectos'});
+        res.render('signup',{mensaje:'Datos incorrectos',idU: req.session.idU});
     }
     
     db.query(consulta,function(error, resultado){
@@ -24,7 +24,7 @@ router.post('/', function(req,res,next){
             console.log(error)
         }
         else{
-            res.render('login');
+            res.render('login',{idU: req.session.idU});
         }
     });
 });
