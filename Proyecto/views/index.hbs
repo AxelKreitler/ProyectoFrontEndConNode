@@ -24,9 +24,9 @@
                 <div class="post1">
                     <h2>Post mas populares</h2>
                     <p></p>
-                    <p><a href="index.html">Post numero 1</a></p>
-                    <p><a href="index.html">Post numero 2</a></p>
-                    <p><a href="index.html">Post numero 3</a></p>
+                    {{#each populares}}
+                    <p><a href="/post/{{id}}">{{Titulo}}</a></p>
+                    {{/each}}
                 </div>
             </div>
         </div>
