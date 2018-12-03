@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2018 a las 02:09:38
--- Versión del servidor: 10.1.29-MariaDB
--- Versión de PHP: 7.2.0
+-- Tiempo de generación: 03-12-2018 a las 08:46:04
+-- Versión del servidor: 10.1.32-MariaDB
+-- Versión de PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,11 +43,11 @@ CREATE TABLE `publicaciones` (
 --
 
 INSERT INTO `publicaciones` (`id`, `Titulo`, `SubTitulo`, `Descripcion`, `Imagen`, `creador_id`, `vistas`) VALUES
-(1, 'Titulo Pendiente', 'Subtitulo /Fecha de publicacion', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia non dolore ducimus blanditiis, fugiat perspiciatis quidem soluta quis inventore dolor sed magnam. Officia iure consequatur deserunt corporis eaque omnis suscipit.', '/images/FondoNoche.jpg', NULL, 0),
-(2, 'Titulo prueba 2', 'Los subtitulos tambien pueden ser fechas', 'Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.\r\n\r\nThestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer\'s Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.\r\n\r\nAlohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.', '/images/FondoNoche.jpg', NULL, 0),
-(3, 'Titulo Newpost prueba', 'probando', 'Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', '/images/bioshock1D4.jpg', 1, 0),
-(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1, 0),
-(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1, 0);
+(1, 'Titulo Pendiente', 'Subtitulo /Fecha de publicacion', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia non dolore ducimus blanditiis, fugiat perspiciatis quidem soluta quis inventore dolor sed magnam. Officia iure consequatur deserunt corporis eaque omnis suscipit.', '/images/FondoNoche.jpg', 2, 1),
+(2, 'Titulo prueba 2', 'Los subtitulos tambien pueden ser fechas', 'Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.\r\n\r\nThestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer\'s Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.\r\n\r\nAlohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.', '/images/FondoNoche.jpg', 2, 1),
+(3, 'Titulo Newpost prueba', 'probando', 'Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', '/images/bioshock1D4.jpg', 1, 5),
+(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1, 4),
+(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -58,18 +58,22 @@ INSERT INTO `publicaciones` (`id`, `Titulo`, `SubTitulo`, `Descripcion`, `Imagen
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `descripcion` varchar(1000) DEFAULT NULL,
+  `foto` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `password`) VALUES
-(1, 'asd@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7'),
-(2, 'asd2@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7'),
-(3, 'asd3@hotmail.com', '297ff4a97fcda4bc0ecf0bb18168034a'),
-(4, 'asd4@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7');
+INSERT INTO `usuarios` (`id`, `email`, `password`, `nombre`, `descripcion`, `foto`) VALUES
+(1, 'asd@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7', 'Juan', 'Fan de los autos', '/images/placeholder.jpg'),
+(2, 'asd2@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7', 'Pedro', 'Inventor de la lampara', '/images/placeholder.jpg'),
+(3, 'asd3@hotmail.com', '297ff4a97fcda4bc0ecf0bb18168034a', 'Franco', 'Experto en capitulo de los simpsons', '/images/FondoNoche.jpg'),
+(4, 'asd4@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7', 'Jorge Luis', 'Fan de harry potter y geologia', '/images/FondoNoche.jpg'),
+(5, 'asd5@hotmail.com', 'bfd59291e825b5f2bbf1eb76569f8fe7', 'Juan Perez', 'Lorem x1000 caracteres', '/images/SkyrimtPzJm.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -101,7 +105,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
