@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2018 a las 08:46:04
+-- Tiempo de generación: 03-12-2018 a las 21:32:05
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `proyectofrontend`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `id_creador` int(11) NOT NULL,
+  `id_post` int(11) NOT NULL,
+  `comentario` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id`, `id_creador`, `id_post`, `comentario`) VALUES
+(1, 1, 1, 'muy buena publicacion');
 
 -- --------------------------------------------------------
 
@@ -46,8 +66,8 @@ INSERT INTO `publicaciones` (`id`, `Titulo`, `SubTitulo`, `Descripcion`, `Imagen
 (1, 'Titulo Pendiente', 'Subtitulo /Fecha de publicacion', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia non dolore ducimus blanditiis, fugiat perspiciatis quidem soluta quis inventore dolor sed magnam. Officia iure consequatur deserunt corporis eaque omnis suscipit.', '/images/FondoNoche.jpg', 2, 1),
 (2, 'Titulo prueba 2', 'Los subtitulos tambien pueden ser fechas', 'Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.\r\n\r\nThestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer\'s Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.\r\n\r\nAlohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.', '/images/FondoNoche.jpg', 2, 1),
 (3, 'Titulo Newpost prueba', 'probando', 'Loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm', '/images/bioshock1D4.jpg', 1, 5),
-(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1, 4),
-(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1, 3);
+(4, 'Titulo Newpost prueba2', 'probando2', 'prueba numero 2.', '/images/forza5iDd0.jpg', 1, 5),
+(11, 'Titulo Newpost prueba3', 'probando3', 'Prueba numero 3', '/images/starwarsgKR8.jpg', 1, 13);
 
 -- --------------------------------------------------------
 
@@ -80,6 +100,12 @@ INSERT INTO `usuarios` (`id`, `email`, `password`, `nombre`, `descripcion`, `fot
 --
 
 --
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
@@ -94,6 +120,12 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `publicaciones`

@@ -14,7 +14,7 @@ router.get('/', function(req,res,next){
             console.log(error);
         }
         if(result[0].nombre==null){
-            res.render('set-profile',{mensaje:'Acceso Denegado, logeate primero.',idU: req.session.idU})
+            res.render('set-profile',{mensaje:'Acceso Denegado, genera tu perfil primero.',idU: req.session.idU})
         }
         else{
             var queryUsers = "select * from usuarios where nombre is not null";
@@ -40,7 +40,7 @@ router.post('/', function(req, res, next) {
             console.log(error);
         }
         if(result[0].nombre==null){
-            res.render('set-profile',{mensaje:'Acceso Denegado, crea tu perfil primero.',idU: req.session.idU})
+            res.render('set-profile',{mensaje:'Acceso Denegado, genera tu perfil primero.',idU: req.session.idU})
         }
         else{
             var search = req.body.search2;

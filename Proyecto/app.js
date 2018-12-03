@@ -20,6 +20,7 @@ var newProjectRouter = require('./routes/new-project');
 var logoutRouter = require('./routes/logout');
 var socialRouter = require('./routes/social');
 var setProfileRouter = require('./routes/set-profile');
+var commentsRouter = require('./routes/comments');
 
 var app = express();
 
@@ -50,6 +51,7 @@ app.use('/new-project', newProjectRouter);
 app.use('/logout', logoutRouter);
 app.use('/social', socialRouter);
 app.use('/set-profile', setProfileRouter);
+app.use('/comments', commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
