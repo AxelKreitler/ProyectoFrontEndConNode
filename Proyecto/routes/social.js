@@ -5,9 +5,9 @@ var db = require('./db');
 router.get('/', function(req,res,next){
 
     if(req.session.idU == null){
-        res.redirect('login',{mensaje:'Acceso Denegado, crea tu perfil primero.',idU: req.session.idU});
+        res.redirect('login');
     }
-    
+    else{
     var queryCheckForProfile = "SELECT nombre FROM `usuarios` where id="+req.session.idU;
     db.query(queryCheckForProfile,function(error,result){
         if(error){
@@ -27,13 +27,14 @@ router.get('/', function(req,res,next){
             });
         }
     });  
+    }
 });
 
 router.post('/', function(req, res, next) {
     if(req.session.idU == null){
-        res.redirect('login',{mensaje:'Acceso Denegado, logeate primero.',idU: req.session.idU});
+        res.redirect('login');
     } 
-
+    else{
     var queryCheckForProfile = "SELECT nombre FROM `usuarios` where id="+req.session.idU;
     db.query(queryCheckForProfile, function(error,result){
         if(error){
@@ -54,6 +55,7 @@ router.post('/', function(req, res, next) {
             });
         }
     });
+    }
 });
 
 module.exports = router;
