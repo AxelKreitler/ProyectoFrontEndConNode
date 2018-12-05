@@ -17,20 +17,23 @@
             <div class="partederecha1">
                 <div class="post1">
                     <h2>About us</h2>
-                    <img src="/images/FondoNoche.jpg" style="height:100px;">
-                    <p>Email: AAAAA@HOTMAIL.COM</p>
+                    <img src="/images/company_logo.jpg" style="height:200px;">
+                    <p>Email: horizongames@gmail.com</p>
                 </div>
                 <div class="paddingEndPost"></div>
                 <div class="post1">
-                    <h2>Post mas populares</h2>
-                    <p></p>
-                    {{#each populares}}
-                    <p><a href="/post/{{id}}">{{Titulo}}</a></p>
-                    {{/each}}
+                    <h3>Most popular posts</h3>
+                    <table class="table1">
+                        <tbody>
+                            {{#each populares}}
+                                <tr>
+                                    <td><a href="/post/{{id}}" class="popularPost">{{Titulo}}</a></td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
+    </div>  
 </body>
